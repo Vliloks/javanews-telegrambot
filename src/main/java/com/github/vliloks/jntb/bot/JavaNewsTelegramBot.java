@@ -2,6 +2,7 @@ package com.github.vliloks.jntb.bot;
 
 import com.github.vliloks.jntb.command.CommandContainer;
 import com.github.vliloks.jntb.service.SendBotMessageServiceImpl;
+import com.github.vliloks.jntb.service.TelegramUserService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -24,8 +25,8 @@ public class JavaNewsTelegramBot extends TelegramLongPollingBot {
 
     private final CommandContainer commandContainer;
 
-    public JavaNewsTelegramBot() {
-        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this));
+    public JavaNewsTelegramBot(TelegramUserService telegramUserService) {
+        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this), telegramUserService);
     }
 
     @Override
