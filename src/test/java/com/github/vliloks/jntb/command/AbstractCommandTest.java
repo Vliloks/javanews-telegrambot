@@ -3,6 +3,7 @@ package com.github.vliloks.jntb.command;
 import com.github.vliloks.jntb.bot.JavaNewsTelegramBot;
 import com.github.vliloks.jntb.service.SendBotMessageService;
 import com.github.vliloks.jntb.service.SendBotMessageServiceImpl;
+import com.github.vliloks.jntb.service.TelegramUserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -14,6 +15,7 @@ abstract class AbstractCommandTest {
 
     protected JavaNewsTelegramBot javaNewsBot = Mockito.mock(JavaNewsTelegramBot.class);
     protected SendBotMessageService sendBotMessageService = new SendBotMessageServiceImpl(javaNewsBot);
+    protected TelegramUserService telegramUserService = Mockito.mock(TelegramUserService.class);
 
     abstract String getCommandName();
 

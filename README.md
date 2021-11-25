@@ -1,2 +1,2 @@
-# javanews-telegrambot
-News for java developer in telegram
+# JavaNews TelegramBot
+News for java developer in telegram.
