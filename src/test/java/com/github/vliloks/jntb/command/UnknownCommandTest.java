@@ -9,7 +9,7 @@ public class UnknownCommandTest extends AbstractCommandTest {
 
     @Override
     String getCommandName() {
-        return "/fdgdfgdfgdbd";
+        return "/jkkjrrdsaf";
     }
 
     @Override
