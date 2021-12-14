@@ -3,6 +3,7 @@ package com.github.vliloks.jntb.command;
 import com.github.vliloks.jntb.javarushclient.JavaRushGroupClient;
 import com.github.vliloks.jntb.service.GroupSubService;
 import com.github.vliloks.jntb.service.SendBotMessageService;
+import com.github.vliloks.jntb.service.StatisticsService;
 import com.github.vliloks.jntb.service.TelegramUserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,8 +13,10 @@ import org.mockito.Mockito;
 
 import java.util.Arrays;
 
+import static java.util.Collections.singletonList;
+
 @DisplayName("Unit-level testing for CommandContainer")
-public class CommandContainerTest {
+class CommandContainerTest {
 
     private CommandContainer commandContainer;
 
@@ -23,26 +26,34 @@ public class CommandContainerTest {
         TelegramUserService telegramUserService = Mockito.mock(TelegramUserService.class);
         JavaRushGroupClient groupClient = Mockito.mock(JavaRushGroupClient.class);
         GroupSubService groupSubService = Mockito.mock(GroupSubService.class);
-        commandContainer = new CommandContainer(sendBotMessageService, telegramUserService, groupClient, groupSubService);
+        StatisticsService statisticsService = Mockito.mock(StatisticsService.class);
+        commandContainer = new CommandContainer(sendBotMessageService,
+                telegramUserService,
+                groupClient,
+                groupSubService,
+                singletonList("username"),
+                statisticsService);
     }
 
     @Test
     public void shouldGetAllTheExistingCommands() {
+        //when-then
         Arrays.stream(CommandName.values())
                 .forEach(commandName -> {
-                    Command command = commandContainer.retrieveCommand(commandName.getCommandName());
+                    Command command = commandContainer.retrieveCommand(commandName.getCommandName(), "username");
                     Assertions.assertNotEquals(UnknownCommand.class, command.getClass());
                 });
     }
 
     @Test
     public void shouldReturnUnknownCommand() {
-        String unknownCommand = "/sdfhhfs";
+        //given
+        String unknownCommand = "/fgjhdfgdfg";
 
-        Command command = commandContainer.retrieveCommand(unknownCommand);
+        //when
+        Command command = commandContainer.retrieveCommand(unknownCommand, "username");
 
+        //then
         Assertions.assertEquals(UnknownCommand.class, command.getClass());
-
-
     }
 }

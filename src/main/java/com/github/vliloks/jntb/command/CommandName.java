@@ -6,6 +6,7 @@ public enum CommandName {
     STOP("/stop"),
     NO("nocommand"),
     HELP("/help"),
+    ADMIN_HELP("/ahelp"),
     STAT("/stat"),
     ADD_GROUP_SUB("/addgroupsub"),
     LIST_GROUP_SUB("/listgroupsub"),

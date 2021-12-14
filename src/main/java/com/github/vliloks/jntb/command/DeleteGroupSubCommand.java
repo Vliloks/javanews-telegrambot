@@ -20,6 +20,7 @@ import static java.lang.String.format;
 import static org.apache.commons.lang3.StringUtils.SPACE;
 import static org.apache.commons.lang3.StringUtils.isNumeric;
 
+
 public class DeleteGroupSubCommand implements Command {
 
     private final SendBotMessageService sendBotMessageService;
@@ -29,8 +30,8 @@ public class DeleteGroupSubCommand implements Command {
     public DeleteGroupSubCommand(SendBotMessageService sendBotMessageService, GroupSubService groupSubService,
                                  TelegramUserService telegramUserService) {
         this.sendBotMessageService = sendBotMessageService;
-        this.telegramUserService = telegramUserService;
         this.groupSubService = groupSubService;
+        this.telegramUserService = telegramUserService;
     }
 
     @Override
@@ -64,21 +65,19 @@ public class DeleteGroupSubCommand implements Command {
                 .orElseThrow(NotFoundException::new)
                 .getGroupSubs();
         if (CollectionUtils.isEmpty(groupSubs)) {
-            message =  "Пока нет подписок на группы. Чтобы добавить подписку напиши /addGroupSub";
+            message = "Пока нет подписок на группы. Чтобы добавить подписку напиши /addGroupSub";
         } else {
-            message = "Чтобы удалить подписку на группу - передай команду вместе с ID группы. \n" +
+            String userGroupSubData = groupSubs.stream()
+                    .map(group -> format("%s - %s \n", group.getTitle(), group.getId()))
+                    .collect(Collectors.joining());
+
+            message = String.format("Чтобы удалить подписку на группу - передай команду вместе с ID группы. \n" +
                     "Например: /deleteGroupSub 16 \n\n" +
                     "я подготовил список всех групп, на которые ты подписан) \n\n" +
                     "имя группы - ID группы \n\n" +
-                    "%s";
+                    "%s", userGroupSubData);
         }
-        String userGroupSubData = groupSubs.stream()
-                .map(group -> format("%s - %s \n", group.getTitle(), group.getId()))
-                .collect(Collectors.joining());
 
-        sendBotMessageService.sendMessage(chatId.toString(), format(message, userGroupSubData));
-
+        sendBotMessageService.sendMessage(chatId.toString(), message);
     }
-
-
 }
