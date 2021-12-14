@@ -10,19 +10,19 @@
 	</parent>
 	<groupId>com.github.vliloks</groupId>
 	<artifactId>javanews-telegrambot</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>Javanews TelegramBot</name>
 	<description>News for java developer in telegram</description>
 	<properties>
 		<java.version>11</java.version>
-		<telegrambot.starter.version>5.0.1</telegrambot.starter.version>
-		<flyway.version>5.2.4</flyway.version>
-		<unirest.version>3.11.01</unirest.version>
-		<apache.commons.version>3.11</apache.commons.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
+		<telegrambot.starter.version>5.0.1</telegrambot.starter.version>
+		<flyway.version>5.2.4</flyway.version>
+		<unirest.version>3.11.01</unirest.version>
+		<apache.commons.version>3.11</apache.commons.version>
 	</properties>
 	<dependencies>
 		<dependency>
