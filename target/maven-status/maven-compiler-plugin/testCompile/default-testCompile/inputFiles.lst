@@ -1,0 +1,17 @@
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\NoCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\CommandContainerTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\repository\GroupSubRepositoryIT.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\ListGroupSubCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\repository\TelegramUserRepositoryIT.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\StopCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\HelpCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\DeleteGroupSubCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\UnknownCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\StatCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\javarushclient\JavaRushPostClientTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\StartCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\javarushclient\JavaRushGroupClientTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\AdminHelpCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\service\SendBotMessageServiceTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\command\AbstractCommandTest.java
+D:\JAVA_projects\javanews-telegrambot\src\test\java\com\github\vliloks\jntb\JavanewsTelegramBotApplicationTests.java
