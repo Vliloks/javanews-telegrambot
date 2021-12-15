@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.github.vliloks</groupId>
 	<artifactId>javanews-telegrambot</artifactId>
-	<version>1.0.0</version>
+	<version>1.0</version>
 	<name>Javanews TelegramBot</name>
 	<description>News for java developer in telegram</description>
 	<properties>
