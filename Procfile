@@ -1,1 +1,1 @@
-web: java -jar target/javanews-telegrambot-1.0.0.jar
+worker: java $JAVA_OPTS -jar target/javanews-telegrambot-1.0.jar
