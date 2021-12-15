@@ -5,7 +5,7 @@ News for Java developer in Telegram.
 ![alt tag](https://i.ibb.co/tMHD0Bp/chat-bot-featured-1240x580.jpg "image")​
 
 ## Idea
-Make a bot that will notify everyone about new news from the groups which they are subscribed.
+Make a bot that will notify everyone about new posts from the groups which they are subscribed.
 
 # How it works 
 Bot regularly checks for new articles in the JavaRush groups, that you subscribed, and makes distribution.
