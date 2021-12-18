@@ -1,6 +1,6 @@
 # JavaNews TelegramBot
 News for Java developer in Telegram.
-[Bot link](https://t.me/test_vliloks_javanews_bot)
+[Bot link](https://t.me/vliloks_javanews_bot)
 
 ![alt tag](https://i.ibb.co/tMHD0Bp/chat-bot-featured-1240x580.jpg "image")​
 
